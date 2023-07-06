@@ -1,0 +1,43 @@
+$XSmallSize:0px;
+$SmallSize: 540px;
+$MediumSize: 720px;
+$LargeSize: 960px;
+$ExtraSize: 1140px;
+
+@media (min-width: $XSmallSize) {
+    #intro{
+        padding-top: 100px;
+        .container{
+            h1{
+                font-size: 25px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+    #about{
+        p{
+            font-size: 12px;
+        }
+    }
+    #contact{
+        .mediqueri{
+            margin-bottom: 20px;
+        }
+    }
+}
+@media (min-width: $SmallSize) {
+    #portfolio {
+        .portfolio {
+            .img-fluid {
+                width: 100%;
+            }
+        }
+    }
+}
+@media (min-width: $MediumSize) { 
+    
+}
+@media (min-width: $LargeSize) { 
+}

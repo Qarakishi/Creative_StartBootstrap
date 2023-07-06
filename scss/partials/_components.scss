@@ -1,0 +1,70 @@
+
+//Button
+%y-btn{
+    margin-top: 8px;
+    display: inline-block;
+    text-align: center;
+    padding: 13px 30px;
+    border-radius: 27px;
+    font-weight: 700;
+    @include setTransitions(all, 0.5s);
+    &:hover{
+        text-decoration: none;
+    }
+}
+.btn-red{
+    @extend %y-btn;
+    background: $primary-color;
+    color: white;
+    &:hover{
+        color: white;
+        background: darken($primary-color,10);
+    }
+}
+.btn-white{
+    @extend %y-btn;
+    background: white;
+    color: black;
+    &:hover{
+        color: black;
+        background: darken(white,10);
+    }
+}
+
+// After
+%after{
+    position: relative;
+    margin-bottom: 35px;  // basa dusmedim
+    padding-bottom: 35px;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 4px;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,0); // sual yanindaki xettdi ortaya getirmek ucun
+        border-radius: 1.5px;
+    }
+}
+.after-red{
+    @extend %after;
+    &::after{
+        background-color: $primary-color;
+        h1{
+            color: white;
+        }
+        p{
+            color: $secondary-color;
+            font-size: $text-size
+        }
+
+    }
+}
+.after-white{
+    @extend %after;
+    &::after{
+        background-color: white;
+        
+    }
+}
